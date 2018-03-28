@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<breakfast-menu>
+	<food id="1">
+		<name>Barbecue</name>
+		<price>$5.10</price>
+		<description>some meet</description>
+		<calories>300</calories>
+	</food>
+
+	<food id="2">
+		<name>Toast</name>
+		<price>$1</price>
+		<description>some bread</description>
+		<calories>100</calories>
+	</food>
+</breakfast-menu>

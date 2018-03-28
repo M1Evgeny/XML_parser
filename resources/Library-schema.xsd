@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xns:schema xmlns:xns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.it-academy.by/Library-schema" xmlns:itacby="http://www.it-academy.by/Library-schema"
+	elementFormDefault="qualified">
+
+	<xns:element name="printed_edition">
+		<xns:complexType>
+			<xns:sequence>
+				<xns:element name="book" type="itacby:template_printed_edition"
+					minOccurs="0" maxOccurs="unbounded" />
+				<xns:element name="magazin" type="itacby:template_printed_edition"
+					minOccurs="0" maxOccurs="unbounded" />
+				<xns:element name="newspaper" type="itacby:template_printed_edition"
+					minOccurs="0" maxOccurs="unbounded" />
+			</xns:sequence>
+		</xns:complexType>
+	</xns:element>
+
+	<xns:complexType name="template_printed_edition">
+		<xns:sequence>
+			<xns:element name="title" type="xns:string" />
+			<xns:element name="author" type="xns:string" />
+			<xns:element name="publish_year" type="xns:int" />
+			<xns:element name="description" type="xns:string" />
+			<xns:element name="redability" type="itacby:template_redability" />
+		</xns:sequence>
+		<xns:attribute name="id" />
+	</xns:complexType>
+
+	<xns:complexType name="template_redability">
+		<xns:simpleContent>
+			<xns:extension base="xns:string">
+				<xns:attribute name="choise" type="itacby:where_to_read" />
+				<xns:attribute name="id" type="xns:int" use="optional" />
+			</xns:extension>
+		</xns:simpleContent>
+	</xns:complexType>
+
+	<xns:simpleType name="where_to_read">
+		<xns:restriction base="xns:string">
+			<xns:enumeration value="home" />
+			<xns:enumeration value="library" />
+		</xns:restriction>
+	</xns:simpleType>
+
+</xns:schema>

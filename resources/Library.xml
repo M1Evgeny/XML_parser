@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE XML>
+
+<library xmlns="http://www.it-academy.by/Library-schema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.it-academy.by/Library-schema Library-schema.xsd">
+	<printed_edition>
+		<book id="1">
+			<title>Some cook book</title>
+			<author>Some author</author>
+			<publish_year>2009</publish_year>
+			<description>some info</description>
+			<redability id="7">home</redability>
+		</book>
+	</printed_edition>
+	<printed_edition>
+		<magazin id="1">
+			<title>Sports Illustrated</title>
+			<author>Kreig Stor</author>
+			<publish_year>1995</publish_year>
+			<description>some info</description>
+			<redability>library</redability>
+		</magazin>
+	</printed_edition>
+</library>
